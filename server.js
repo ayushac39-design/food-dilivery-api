@@ -6,6 +6,7 @@ const restaurantRoutes = require('./routes/resturent.route');
 const foodRoutes = require('./routes/menu.route');
 const orderRoutes = require('./routes/oder.routes');
 const cartRoutes = require('./routes/cart.routes');
+const aiRoutes = require('./routes/ai.route');
 
 const app = express();
 
@@ -15,6 +16,7 @@ app.use('/api/restaurants', restaurantRoutes);
 app.use('/api/food', foodRoutes);
 app.use('/api/orders', orderRoutes);
 app.use('/api/cart', cartRoutes); 
+app.use('/api/ai', aiRoutes);
 
 const logger = (req, res, next)=>{
     console.log(`${req.method} ${req.url}`);
